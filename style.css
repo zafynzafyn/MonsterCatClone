@@ -1,0 +1,563 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: black;
+    background-image: url(img/background-img.webp);
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    margin-bottom: 5rem;
+}
+
+hr {
+
+    width: 960px;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    border: none;
+    height: 1px;
+    background-color: #F1F1F1;
+    margin-right: 200px;
+    margin-left: 200px;
+}
+
+
+/* header sec */
+#header {
+    background-image: url(img/album-cover.webp);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    /* filter: blur(10px) brightness(38%);
+    -webkit-filter: blur(10px) brightness(38%); */
+
+}
+
+#header::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .8;
+    z-index: -1;
+}
+
+#header .header-bar {
+    position: relative;
+    z-index: 2;
+}
+
+#header .header-bar .content {
+    position: fixed;
+}
+
+#header .header-bar .content .top-nav {
+    position: absolute;
+    top: 20px;
+    left: -80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1170px;
+}
+
+#header .header-bar .content .top-nav a img {
+    width: 50px;
+    aspect-ratio: auto 50 / 50;
+    height: 50px;
+
+}
+
+#header .header-bar .content .top-nav .menu-toggle {
+    /* display: none; */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    margin-right: -3px;
+}
+
+#header .header-bar .content .top-nav .menu-toggle .ham {
+    height: 3px;
+    width: 70%;
+    background-color: white;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+#header .header-bar .content .right-nav {
+    position: absolute;
+    top: 90px;
+    left: 1060px;
+}
+
+#header .header-bar .content .right-nav .media-1 ul li {
+    list-style: none;
+    padding-bottom: 10px;
+}
+
+/* header body */
+
+#header .header-body-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+#header .header-body-container .left-side {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    position: relative;
+
+}
+
+#header .header-body-container .left-side .album-detail {
+    color: #F1F1F1;
+    font-style: italic;
+    width: 300px;
+    transform: rotate(-90deg);
+    position: absolute;
+    left: -120px;
+}
+
+#header .header-body-container .left-side img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
+#header .header-body-container .left-side .album-detail span {
+    color: #01b289;
+}
+
+#header .header-body-container .right-side {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+}
+
+#header .header-body-container .right-side .album-name {
+    font-size: 32px;
+    font-weight: 300px;
+    letter-spacing: 0.1em;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #F1F1F1;
+    -webkit-text-fill-color: transparent;
+
+}
+
+#header .header-body-container .right-side .artist-name {
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    line-height: 1;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#header .header-body-container .right-side .button-container {
+    display: flex;
+}
+
+#header .header-body-container .right-side .listennow-b {
+    font-weight: bold;
+    background-color: #01b289;
+    text-transform: uppercase;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px 12px 20px;
+
+}
+
+#header .header-body-container .right-side .listennow-b img,
+#header .header-body-container .right-side .share-b img {
+    height: 15px;
+    width: 15px;
+    margin-right: 10px;
+
+}
+
+#header .header-body-container .right-side .share-b {
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    background-color: transparent;
+    border: #F1F1F1;
+    border-style: solid;
+    border-width: 1px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 50px 15px 30px;
+    margin-left: 8px;
+
+}
+
+#header .header-body-container .right-side .share-b:hover {
+    cursor: pointer;
+}
+
+/* end header body */
+/* End of header sec */
+
+
+
+/* option sec */
+#option {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+#option .option-container {
+    margin-left: 200px;
+}
+
+#option .option-container .icon-container {
+    display: flex;
+    align-items: center;
+}
+
+#option .option-container .icon-container img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+#option .option-container .icon-container .bc-music img,
+#option .option-container .icon-container .sc-music img {
+    height: 90%;
+    width: 90%;
+}
+
+#option .option-container .icon-container .m-p {
+    padding-right: 7px;
+}
+
+#option .option-container h1 {
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    font-size: 2.5em;
+    line-height: 1;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+/* option sec */
+
+/* tracklist sec */
+
+#tracklist .tracklist-container {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 50px;
+}
+
+#tracklist .tracklist-name {
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    font-size: 2.5em;
+    line-height: 1;
+    margin-bottom: 40px;
+}
+
+
+/* #tracklist .tracklist-container table {
+    color: #F1F1F1;
+    border-collapse: collapse;
+    align-items: center;
+    font-size: 18px;
+    border-style: solid;
+    border-color: white;
+}
+
+#tracklist .tracklist-container table tr {
+    padding-bottom: 30px;
+}
+
+#tracklist .tracklist-container table .number {
+    width: 30px;
+}
+
+#tracklist .tracklist-container table .right-side {
+
+    display: flex;
+    align-items: center;
+    padding: 7px 600px 5px 0;
+    font-weight: bold;
+
+}
+
+#tracklist .tracklist-container table .right-side .artist {
+    font-size: 14px;
+}
+
+#tracklist .tracklist-container table .right-side img {
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+#tracklist .tracklist-container table .share-icon {
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+    margin-left: 50px;
+} */
+
+#tracklist .tracklist-songs .tracklist-song-container {
+    color: #fdfdfd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+#tracklist .tracklist-songs .left-side,
+#tracklist .tracklist-songs .right-side {
+    display: flex;
+    align-items: center;
+}
+
+#tracklist .tracklist-songs .left-side .number {
+    margin-right: 30px;
+}
+
+#tracklist .tracklist-songs .left-side img {
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+    margin-right: 20px;
+
+}
+
+#tracklist .tracklist-songs .right-side img {
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+    margin-left: 40px;
+}
+
+#tracklist .tracklist-songs .left-side .artist {
+    font-size: 13px;
+}
+
+/* End of tracklist sec */
+
+/* Album Suggestion */
+#album-sg {
+    margin-left: 200px;
+    margin-bottom: 130px;
+
+}
+
+#album-sg .album-sg-container-main {
+    display: flex;
+}
+
+#album-sg h1 {
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    font-size: 2.5em;
+    line-height: 1;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 3px;
+}
+
+#album-sg .album-container {
+    padding-right: 20px;
+
+}
+
+#album-sg .album-container img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#album-sg .album-container .album-name {
+    color: white;
+    text-transform: uppercase;
+}
+
+#album-sg .album-container .album-name:hover,
+#album-sg .album-container .artist-name:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#album-sg .album-container .artist-name {
+    color: #fdfdfd;
+    font-size: 12px;
+}
+
+/*End of Album Suggestion */
+
+/* footer */
+/* #about-contact {
+    max-width: 992px;
+
+} */
+
+#about-contact .about-contact-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    color: white;
+    margin-left: 200px;
+    margin-right: auto;
+    grid-gap: 0em 1em;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    padding-right: 190px;
+}
+
+#about-contact .about-contact-container .container-1 p,
+#about-contact .about-contact-container .container-2 p {
+    text-transform: uppercase;
+    font-size: 18px;
+    padding-bottom: 15px;
+}
+
+#about-contact .about-contact-container .news-title {
+    color: #898888;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+#about-contact .about-contact-container .mss {
+    font-style: italic;
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+#about-contact .about-contact-container .email-form {
+    display: flex;
+    margin-top: 2rem;
+}
+
+
+#about-contact .about-contact-container .email-form input {
+    background-color: transparent;
+    border-color: none;
+    border-width: 0;
+    font-size: 18px;
+
+}
+
+#about-contact .about-contact-container .email-form button {
+    background: transparent;
+    border: 1px solid;
+    border-color: transparent;
+    color: white;
+    border-radius: 0;
+}
+
+#about-contact .about-contact-container .email-form button img {
+    width: 70%;
+}
+
+#about-contact .about-contact-container .email-form button:hover {
+    cursor: pointer;
+}
+
+/* contact-media section */
+#contact-media {
+    margin-right: 200px;
+    margin-left: 200px;
+}
+
+#contact-media .right-media {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-style: italic;
+    color: #F1F1F1;
+}
+
+
+
+#contact-media .right-media .media ul {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+#contact-media .right-media .media li {
+    list-style: none;
+    padding: 0 8px 0 8px;
+}
+
+#contact-media .right-media .media li img {
+    width: 80%;
+    height: 80%;
+}
+
+#contact-media .right-media .media li img:hover {
+    cursor: pointer;
+}
+
+#contact-media .right-media .media li .triller {
+    width: 40%;
+    height: 40%;
+}
+
+#contact-media .last-message p {
+    padding-top: 4rem;
+    text-align: center;
+    color: #F1F1F1;
+    font-style: italic;
+    font-size: 11px;
+
+}
+
+/* End of contact-media section */
+
+/* End of footer */
